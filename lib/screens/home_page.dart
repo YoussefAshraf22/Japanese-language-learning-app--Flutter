@@ -7,11 +7,13 @@ import 'colors_screen.dart';
 import 'numbers_screen.dart';
 
 class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(
+          title: const Text(
             'Toku App',
             style: TextStyle(fontSize: 25, color: Colors.white),
           ),
@@ -21,19 +23,15 @@ class HomePage extends StatelessWidget {
         body: SafeArea(
           child: Column(
             children: [
-              SizedBox(
-                height: 2,
-              ),
               Category(
                   name: 'Numbers',
                   color: Colors.orange,
                   onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => NumbersPage()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const NumbersPage()));
                   }),
-              SizedBox(
-                height: 5,
-              ),
               Category(
                 name: 'Family Members',
                 color: Colors.green,
@@ -41,12 +39,9 @@ class HomePage extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => FamilyPage(),
+                        builder: (context) => const FamilyPage(),
                       ));
                 },
-              ),
-              SizedBox(
-                height: 5,
               ),
               Category(
                 name: 'Colors',
@@ -55,12 +50,9 @@ class HomePage extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => ColorsPage(),
+                        builder: (context) => const ColorsPage(),
                       ));
                 },
-              ),
-              SizedBox(
-                height: 5,
               ),
               Category(
                 name: 'Pharses',
@@ -69,7 +61,7 @@ class HomePage extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => PharsesPage(),
+                        builder: (context) => const PharsesPage(),
                       ));
                 },
               ),

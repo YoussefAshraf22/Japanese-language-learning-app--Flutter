@@ -14,6 +14,6 @@ class TokuApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: ThemeData(useMaterial3: true),
         title: 'Toku Language App',
-        home: Scaffold(body: SafeArea(child: HomePage())));
+        home:const Scaffold(body: SafeArea(child: HomePage())));
   }
 }
