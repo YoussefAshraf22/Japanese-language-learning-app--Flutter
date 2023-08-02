@@ -23,6 +23,7 @@ class HomePage extends StatelessWidget {
         body: SafeArea(
           child: Column(
             children: [
+              
               Category(
                   name: 'Numbers',
                   color: Colors.orange,

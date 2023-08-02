@@ -62,7 +62,14 @@ flutter:
     - assets/images/family_members/
     - assets/images/numbers/
     - assets/sounds/colors/
+    - assets/sounds/colors/dustyYellow.wav
     - assets/sounds/family_members/
+    - assets/sounds/family_members/grandFather.wav
+    - assets/sounds/family_members/grandMother.wav
+    - assets/sounds/family_members/oBother.wav
+    - assets/sounds/family_members/olderSister.wav
+    - assets/sounds/family_members/youngerBrohter.wav
+    - assets/sounds/family_members/youngerSister.wav
     - assets/sounds/numbers/
     - assets/sounds/phrases/
 

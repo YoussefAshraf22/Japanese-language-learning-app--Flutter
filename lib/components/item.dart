@@ -1,41 +1,49 @@
 import 'package:flutter/material.dart';
-import '../models/number_model.dart';
+import '../models/model.dart';
 import 'package:audioplayers/audioplayers.dart';
 
 class Item extends StatelessWidget {
-  final Number num;
+  final Model model;
+  final Color color;
+  final String modelSound;
 
-  const Item({Key? key, required this.num}) : super(key: key);
+  const Item(
+      {Key? key,
+      required this.model,
+      required this.color,
+      required this.modelSound})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Container(
-          color: Colors.brown,
+          color: color,
           height: 100,
           child: Row(children: [
             Container(
               color: const Color.fromARGB(255, 251, 234, 234),
               child: Image.asset(
-                num.img,
+                model.img!,
               ),
             ),
             const SizedBox(
               width: 15,
             ),
             Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  num.jpName,
+                  model.jpName,
                   style: const TextStyle(
                       fontSize: 15,
                       color: Colors.white,
                       fontWeight: FontWeight.w400),
                 ),
                 Text(
-                  num.enName,
+                  model.enName,
                   style: const TextStyle(
                       fontSize: 15,
                       color: Colors.white,
@@ -49,8 +57,8 @@ class Item extends StatelessWidget {
                   color: Colors.white, size: 25),
               onPressed: () {
                 AudioCache player =
-                    AudioCache(prefix: 'assets/sounds/numbers/');
-                player.play(num.sound);
+                    AudioCache(prefix: 'assets/sounds/$modelSound/');
+                player.play(model.sound);
               },
             )
           ]),
